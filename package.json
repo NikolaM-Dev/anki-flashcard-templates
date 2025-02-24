@@ -1,0 +1,14 @@
+{
+  "name": "anki-flashcard-templates",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev:watch": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "6.1.0"
+  }
+}
