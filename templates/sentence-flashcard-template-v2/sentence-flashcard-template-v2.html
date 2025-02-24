@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="./reset-styles.css" />
+    <link rel="stylesheet" href="./styles.css" />
+
+    <title>Anki Flashcard Templates</title>
+  </head>
+  <body class="card nightMode">
+    <!-- Front Template -->
+    <section class="flashcard">
+      <div class="flashcard__sentence">{{sentence}}</div>
+      <p class="flashcard__word">{{word}}</p>
+    </section>
+
+    <!-- Back Template -->
+    <section class="flashcard">
+      <article>
+        <div class="flashcard__sentence">{{sentence}}</div>
+
+        <p class="flashcard__word">{{word}}</p>
+      </article>
+
+      <hr class="flashcard__divider" />
+
+      <span class="flashcard__label">Definitions</span>
+
+      <div class="flashcard__word-phonetic" style="font-size: 14px">
+        {{definitions}}
+      </div>
+
+      <hr class="flashcard__divider" />
+
+      <details>
+        <summary>
+          <span class="flashcard__label">Help</span>
+        </summary>
+
+        <ul>
+          <li class="flashcard__sentence-phonetic">{{sentencePhonetic}}</li>
+          <li class="flashcard__sentence-pronunciation">
+            {{sentencePronunciation}}
+          </li>
+        </ul>
+
+        <ul>
+          <li class="flashcard__word-phonetic">{{wordPhonetic}}</li>
+          <li class="flashcard__word-pronunciation">{{wordPronunciation}}</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>
+          <span class="flashcard__label">Translations</span>
+        </summary>
+
+        <ul>
+          <li class="flashcard__sentence-translation">
+            {{sentenceTranslation}}
+          </li>
+          <li class="flashcard__word-translation">{{wordTranslation}}</li>
+        </ul>
+      </details>
+
+      <hr class="flashcard__divider" />
+
+      {{picture}}
+
+      <div class="flashcard__audios">{{sentenceAudio}} {{wordAudio}}</div>
+    </section>
+  </body>
+</html>
